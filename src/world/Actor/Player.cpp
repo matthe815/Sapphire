@@ -551,14 +551,6 @@ bool Player::hasMount( uint32_t mountId ) const
   return m_mountGuide[ index ] & value;
 }
 
-void Player::levelUp()
-{
-  m_hp = getMaxHp();
-  m_mp = getMaxMp();
-
-  setLevel( getLevel() + 1 );
-}
-
 uint8_t Player::getLevel() const
 {
   auto& exdData = Common::Service< Data::ExdData >::ref();
